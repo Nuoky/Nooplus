@@ -1,0 +1,198 @@
+@charset "utf-8";
+
+.auth-btn{
+  /*响应范围*/
+  /*auth按钮基础样式*/
+  width: 96px;//兼容IE8
+  width: pxTorem(96px);
+  margin-top: 5px;
+  height: 34px;
+  line-height: 34px;
+  border-radius: pxTorem(4px);
+  text-align: center;
+  font-size: 16px;
+  font-size: pxTorem(16px);
+
+  a{
+    color: $Color3;
+    width: 96px;
+    height: 34px;
+    @extend .inlineblock;
+    i{
+      margin-right: 10px;//兼容IE8
+      margin-right: pxTorem(10px);
+    }
+  }
+}
+
+/*网站头部*/
+.site-header{
+  .main-header{
+    /*响应范围*/
+    /*网站头部-导航条容器*/
+    position: fixed;
+    top: 54px;
+    top: pxTorem(54px);
+    left: 0;
+    right:0;
+    z-index: 99;
+    transition: all 150ms ease-in-out;
+  }
+  .navbar-content{
+    /*响应范围*/
+    /*网站头部-导航条内容*/
+    height: $headerHeight;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.07);
+    line-height: $headerHeight;
+    .nav-main{
+      /*导航条菜单*/
+      float: right;
+      ul li{
+        border-top: 4px solid transparent; //兼容IE8
+        border-top: pxTorem(4px) solid transparent; //防止动画过程中“跳动”
+        line-height: 40px;//兼容IE8
+        line-height: pxTorem(40px);
+        font-size: 14px;
+        font-size: pxTorem(14px);
+        padding: 0px 4px 0px 4px;//兼容IE8
+        padding: 0px pxTorem(4px) 0px pxTorem(4px);
+        @extend .inlineblock;
+        transition: all 150ms ease-in-out;
+        color: $Color4;
+        & + li{
+          margin-left: 12px; //兼容IE8
+          margin-left: pxTorem(12px);
+        }
+        a{
+          color: inherit;
+          &:hover{
+            color: $Color1;
+          }
+        }
+      }
+      .active{
+        border-top: 4px solid $Color1;//兼容IE8
+        border-top: pxTorem(4px) solid $Color1;
+        color: $Color1;
+      }
+    }
+    .nav-bars{
+      position: absolute;
+      top: 0;
+      right: 6%;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      background-color: $Color1;
+      text-align: center;
+      cursor: pointer;
+      i{
+        color: $Color3;
+      }
+    }
+    .logo{
+      /*响应范围*/
+      /*LOGO*/
+      border-left: 24px solid $Color1;//兼容IE8
+      border-left: pxTorem(24px) solid $Color1;
+      padding-left: 28px;//兼容IE8
+      padding-left: pxTorem(28px);
+      float: left;
+      font-size: 20px;
+      font-size: pxTorem(20px);
+      a{
+        color: $Color1;
+      }
+    }
+    .login-btn, .register-btn, .panel-btn, .logout-btn{
+      float: right;
+      margin-right: 10px;//兼容IE8
+      margin-right: pxTorem(10px);
+      @extend .auth-btn;
+    }
+    .login-btn, .panel-btn{
+      background-color: $Color1;
+      margin-left: 30px;//兼容IE8
+      margin-left: pxTorem(30px);
+    }
+    .register-btn, .logout-btn{
+      background-color: $Color2;
+    }
+  }
+  .scrolled{
+    /*网站头部滚动样式*/
+    top: 0;
+    transition: all 150ms ease-in-out;
+  }
+}
+
+/*media-网站头部*/
+/*IPAD-change(section)*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .site-header {
+    .container {
+      width: 100%;
+    }
+    .main-header {
+      top: 0;
+    }
+  }
+}
+
+/*PHONE-change(all)*/
+@media only screen and (max-width: 767px) {
+  .site-header {
+    .main-header {
+      .container {
+        width: 100%;
+      }
+      top: 0;
+      border-top: pxTorem(4px) solid $Color1;
+    }
+    .navbar-content {
+      background-color: transparent;
+      box-shadow: none;
+      height: 0;
+      overflow: hidden;
+      transition: all 600ms ease-in-out;
+      .nav-main {
+        float: none;
+        transition: all 600ms ease-in-out;
+        ul {
+          background-color: $fontColor;
+          opacity: 0.9;
+          li {
+            display: block;
+            border-top: none !important;
+            margin-left: 0 !important;
+            padding: 0;
+            a {
+              padding: 0 pxTorem(12px);
+              display: block;
+              &:active {
+                background-color: $Color1;
+              }
+            }
+          }
+        }
+      }
+      .nav-bars {
+        display: block !important;
+      }
+      .logo {
+        display: none;
+      }
+      .login-btn, .register-btn, .logout-btn, .panel-btn {
+        display: none;
+      }
+    }
+    .navbar-content-hidden {
+      height: 224px;
+      transition: all 600ms ease-in-out;
+    }
+  }
+}

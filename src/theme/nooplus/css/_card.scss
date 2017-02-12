@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+/*card*/
+.card-main{
+  width:  $card-width;
+  height: 100%;
+  z-index: 10;
+  background-color: $card-bgColor;
+  border-bottom: 4px solid $Color1;
+  border-radius: pxTorem(4px);
+
+  .card-header{
+    .close-btn{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: pxTorem(21px);
+      color: $Color2;
+      cursor:pointer;
+      &:hover {
+        color: $Color1;
+      }
+    }
+    .card-tab{
+      height: 46px;
+      line-height: 46px;
+      background-color: $Color1;
+      text-align: center;
+      color: $Color3;
+      border-top-left-radius: pxTorem(4px);
+      border-top-right-radius: pxTorem(4px);
+      div{
+        cursor: pointer;
+        &:hover{
+          background-color: #3ed0a6;
+        }
+      }
+      .active{
+        background-color: #3ed0a6;
+      }
+    }
+    .card-tab-x1{
+      border-top-left-radius: pxTorem(4px);
+      border-top-right-radius: pxTorem(4px);
+      div{
+        width: 100%;
+      }
+    }
+    .card-tab-x2 {
+      div {
+        float: left;
+        width: 50%;
+        &:first-child{
+          border-top-left-radius: pxTorem(4px);
+        }
+        &:last-child{
+          border-top-right-radius: pxTorem(4px);
+        }
+      }
+    }
+  }
+
+  /*card公共样式*/
+  .card-body{
+    padding: 0px 40px;
+    text-align: center;
+    .form-group{
+      .public{
+        height: 40px;
+        height: pxTorem(40px);
+        border-radius: pxTorem(3px);
+        margin-bottom: 16px;
+      }
+      input[type="text"], input[type="password"]{
+        @extend .public;
+        padding-left: 4%;
+        padding-right: 4%;
+        width: 92%;
+        border: 1px solid #d1d1d1;
+        line-height: 40px;
+        line-height: pxTorem(40px);
+      }
+      button{
+        @extend .public;
+        width: 100%;
+        background-color: $Color1;
+        color: $Color3;
+        border: none;
+        &:hover{
+          background-color: #22ca96;
+        }
+      }
+      button[disabled]{
+        pointer-events: none;
+        cursor: not-allowed;
+        box-shadow: none;
+        opacity: .45;
+      }
+      input[type="checkbox"]{
+        width: 18px;
+        width: pxTorem(18px);
+        height: 18px;
+        height: pxTorem(18px);
+        vertical-align: middle;
+      }
+      select{
+        @extend .public;
+        padding-left: 4%;
+        width: 100%;
+        border: 1px solid #d1d1d1;
+      }
+      span{
+        vertical-align: middle;
+      }
+    }
+  }
+  .card-footer{
+    padding: 5% 40px 2% 40px;
+  }
+  .card-title{
+    text-align: left;
+    color: $Color1;
+    h3{
+      font-size: 24px;
+      font-size: pxTorem(24px);
+      font-weight: normal;
+      line-height: 2;
+    }
+    h4{
+      font-size: 18px;
+      font-size: pxTorem(18px);
+      font-weight: normal;
+      line-height: 1;
+    }
+  }
+
+  /*card私有样式*/
+  .card-login{
+    display: none;
+    .card-avatar{
+      line-height: 0!important;
+      margin: 16px 0px;
+      img{
+        width: 100%;
+        height: 100%;
+        max-width: 88px;
+        max-height: 88px;
+        border: 4px solid $Color1;
+        border-radius: 50%; //图像圆形
+      }
+    }
+    .card-footer{
+      .reset-btn{
+        float: left;
+      }
+      .register-btn{
+        float: right;
+      }
+    }
+  }
+  .card-register{
+    display: none;
+    .card-tos{
+      text-align: left;
+      margin: 10px 0px;
+      a{
+        color: $Color1;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .card-reset{
+    .login-btn{
+      float: left;
+    }
+    .register-btn{
+      float: right;
+    }
+  }
+
+}
+
+/*响应式card样式*/
+/*PHONE-change(all)*/
+@media only screen and (max-width: 767px) {
+  .card-main {
+    border-radius: 0px;
+    .card-header{
+      border-top-radius: none!important;
+    }
+    .card-body{
+      padding: 0 10%;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@charset "utf-8";
+/*基础*/
+@import "var";
+@import "tools";
+@import "basestyle";
+
+/*自定义页面样式*/
+html{
+  height: 100%;
+}
+body {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100%;
+  padding-bottom: 80px;
+}
+
+/*background*/
+@import "fullpageBg";
+
+/*header*/
+@import "header";
+/*headerCustomized*/
+.site-header{
+  .main-header{
+    position: relative;
+    top: 10px;
+  }
+  .navbar-content{
+    background-color: transparent;
+    box-shadow: none;
+    .nav-main{
+      a{
+        color: $Color3!important;
+        &:hover{
+          color: $Color1!important;
+        }
+      }
+      .active{
+        border-top: 4px solid transparent;
+        color: $Color3;
+      }
+    }
+    .logo{
+      border-left: none;
+    }
+  }
+}
+
+/*Card*/
+@import "card";
+/*CardCustomized_Auth*/
+.card-main-auth{
+  position: relative;
+  left: 50%;
+  margin-left: -$card-width/2;
+  margin-top: 100px;
+}
+/*CardCustomized_Tos*/
+.card-main-tos{
+  position: relative;
+  left: 50%;
+  width:  $tos-width;
+  margin-left: -$tos-width/2;
+  margin-top: 100px;
+  .card-body{
+    text-align: left;
+  }
+}
+
+/*footer*/
+@import "footer";
+/*footerCustomized*/
+.site-footer{
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(255,255,255,0.3) 100%);
+  background: none\9;
+  background: none\0;;
+}
+
+
+/*模态窗*/
+@import "bootstrap-modal";
+@import "bootstrap-modal.theme.nooplus";
+
+/*media*/
+@import "response";
+/*mediaCustomized*/
+/*PHONE-change(all)*/
+@media only screen and (max-width: 767px) {
+  body{
+    padding-bottom: 0px;
+  }
+  .site-header{
+    .main-header{
+      position: fixed;
+      top: 0;
+    }
+  }
+  .card-main{
+    margin-left: 0;
+    margin-top: 0;
+    width: 100%;
+    left: 0;
+  }
+  .site-footer{
+    display: none;
+  }
+}

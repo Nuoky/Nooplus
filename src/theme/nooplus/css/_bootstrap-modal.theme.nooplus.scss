@@ -1,0 +1,26 @@
+/*.modal-header {
+  border-bottom: none;
+}*/
+.modal-title{
+  color: $fontColor;
+}
+.modal-footer{
+  //border-top: none;
+  button{
+    cursor: pointer;
+    padding: 6px;
+    border-radius: pxTorem(3px);
+    background-color: $Color1;
+    color: $Color3;
+    border: none;
+    &:hover{
+      background-color: #22ca96;
+    }
+  }
+  button[disabled]{
+    pointer-events: none;
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: .45;
+  }
+}

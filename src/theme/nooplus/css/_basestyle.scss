@@ -1,0 +1,54 @@
+@charset "utf-8";
+/*基础样式----------------------------*/
+html{
+  font-size: $browser-default-font-size;
+  color: $fontColor;
+}
+::selection{
+  background-color: $Color1;
+  text-shadow: none;
+}
+ul, li, h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+body{
+
+  font-size: pxTorem(16px);
+  line-height: 1.5;
+  background-color: $Color3;
+  font-family: 'Lato','Microsoft YaHei', sans-serif;
+}
+a{
+  color: $fontColor;
+  text-decoration: none;
+}
+a:hover, a:active{
+  color: $Color1;
+  text-decoration: none;
+}
+p{
+  font-size: pxTorem(13px);
+}
+h3{
+  font-size: pxTorem(34px);
+}
+h4{
+  font-size: pxTorem(18px);
+  line-height: 5;
+}
+input{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.phcolor{
+  color:#999;//IE9 PLACEHOLDER兼容css样式
+}

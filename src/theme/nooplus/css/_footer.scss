@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/*网站尾部*/
+.site-footer{
+  width: 100%;
+  height: auto;
+  //line-height: 8;
+  padding: 30px 0;
+  padding: pxTorem(30px) 0;
+  text-align: center;
+  background-color: $Color2;
+  color: $Color3;
+  font-size: 13px;
+  font-size: pxTorem(13px);
+  a{
+    color: $Color3;
+    text-decoration: none;
+    border-bottom: 1px solid #999;
+    word-wrap: break-word;
+    border-bottom-color: #ccc;
+    &:hover{
+      color: $Color1;
+      border-bottom-color: $Color1;
+    }
+  }
+  .powered-by, .theme-info{
+    display: inline-block;
+  }
+  .powered-by::after {
+    content: "|";
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/*media-网站尾部*/
+/*PHONE-change(all)*/
+@media only screen and (max-width: 767px) {
+  .site-footer{
+    text-align: right;
+    .powered-by, .theme-info{
+      display: block;
+    }
+    .powered-by::after {
+      display: none;
+    }
+  }
+}

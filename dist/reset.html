@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--<title>Nooplus游戏加速</title>-->
+    <!--<meta name="keywords" content="NOOPLUS,加速器,网游加速器">-->
+    <!--<meta name="description" content="网游加速器">-->
+    <title>DEMO页面-登录</title>
+    <meta name="keywords" content="DEMO">
+    <meta name="description" content="DEMO">
+
+    <link rel="stylesheet" href="/theme/nooplus/css/base-3586c15928.css">
+
+    <link rel="stylesheet" href="/theme/nooplus/css/main-1a3f97019d.css">
+
+    <!--IE8 HTML5标签兼容JS-->
+    <!--[if lt IE 9]>
+    <script src="/theme/nooplus/plugins/html5.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<!--[if lte IE 8]>
+<p class="browserupgrade">您的浏览器版本过低，请升级！</p>
+<![endif]-->
+
+<!--background-->
+<div class="bg-img"></div>
+
+<!--header-->
+<div class="site-header">
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <div class="navbar-content clearfix" id="navbarContent">
+                <div class="logo">
+                    <a href="/#home" class="top-link">NOOPLUS</a>
+                </div>
+                <!--已登录-->
+                <!--TPL预留-->
+                <div class="logout-btn hide">
+                    <a href="/user/logout"><i class="icon-exit"></i>注销</a>
+                </div>
+                <div class="panel-btn hide">
+                    <a href="/user"><i class="icon-wrench"></i>我的账户</a>
+                </div>
+
+                <div class="register-btn">
+                    <a href="/auth/register"><i class="icon-user"></i>注册</a>
+                </div>
+                <div class="login-btn" id="loginBtn">
+                    <a href="/auth/login"><i class="icon-enter"></i>登录</a>
+                </div>
+                <nav class="nav-main">
+                    <ul id="mainMenu">
+                        <li class="active"><a href="/#home" class="top-link">HOME</a></li>
+                        <li><a href="/#service" class="top-link">服务</a></li>
+                        <li><a href="/#game" class="top-link">支持游戏</a></li>
+                        <li><a href="/#price" class="top-link">价格</a></li>
+                        <li><a href="/#feedback" class="top-link">反馈</a></li>
+                    </ul>
+                </nav>
+                <a class="hide nav-bars" id="navBars"><i class="icon-menu"></i></a>
+            </div>
+        </div>
+    </header>
+</div>
+
+<!--card-->
+<div class="card-main card-main-auth" id="cardMain">
+    <div class="card-header">
+        <div class="card-tab card-tab-x1">
+            <div>
+                <span>重置密码</span>
+            </div>
+        </div>
+    </div>
+
+    <!--reset-->
+    <div class="card-content card-reset" show="yes">
+        <div class="card-body">
+            <div class="card-title">
+                <h3>嗨呀，忘记密码了？</h3>
+            </div>
+            <div class="reset-form">
+                <form role="form" action="javascript:void(0);"  method="POST">
+                    <div class="form-group">
+                        <input type="text" value="" placeholder="请输入邮箱" id="resetEmail">
+                        <label for="resetEmail"></label>
+                    </div>
+
+                    <div class="form-group">
+                        <button id="reset" type="submit">重置密码</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card-footer clearfix">
+            <p class="login-btn"><a class="login-link" href="/auth/login">登录</a></p>
+            <p class="register-btn"><a class="login-link" href="/auth/register">新用户注册</a></p>
+        </div>
+    </div>
+
+</div>
+
+<!--footer-->
+<footer class="site-footer">
+    <div class="container">
+        <div class="powered-by">
+            由 <a href="https://github.com/esdeathlove/ss-panel-v3-mod">ss-panel-v3-mod</a> 强力驱动
+        </div>
+        <div class="theme-info">
+            主题 - <a href="https://github.com/Nuoky/Nooplus">Nooplus</a>
+        </div>
+    </div>
+</footer>
+
+<!--Jqurey1.11.3-->
+<script src="/theme/nooplus/plugins/jquery-1.11.3.min.js"></script>
+
+<!--icomoon兼容IE7-->
+<!--[if lt IE 8]>
+<script src="/theme/nooplus/plugins/icomoon/icomoon-ie7.min.js"></script>
+<![endif]-->
+
+<!--兼容input placeholder属性-->
+<!--[if lt IE 10]>
+<script src="/theme/nooplus/plugins/placeholderV2.min.js"></script>
+<![endif]-->
+
+<script src="/theme/nooplus/js/main-5c9c2db654.js"></script>
+
+</body>
+</html>

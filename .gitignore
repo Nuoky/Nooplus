@@ -1,0 +1,9 @@
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# My configurations:
+.idea
+node_modules
+Program Files

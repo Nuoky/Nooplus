@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+
+    <!-- build:css /theme/nooplus/css/base.css -->
+    <!--normalize统一样式-->
+    <link rel="stylesheet" href="/theme/nooplus/css/base/normalize.min.css">
+    <!--icomoon-->
+    <link rel="stylesheet" href="/theme/nooplus/css/base/icomoon.css">
+    <!-- endbuild -->
+
+    <!-- build:css /theme/nooplus/css/main.css -->
+    <!--main-->
+    <link rel="stylesheet" href="/theme/nooplus/css/main.css">
+    <!-- endbuild -->
+
+    <!--IE8 HTML5标签兼容JS-->
+    <!--[if lt IE 9]>
+    <script src="/theme/nooplus/plugins/html5.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="modal fade" tabindex="-1" role="dialog" id="result" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示信息</h4>
+            </div>
+            <div class="modal-body">
+                <p id="msg"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal">我懂</button>
+                <!-- <button type="button" id="result_ok">Save changes</button> -->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--Jqurey1.11.3-->
+<script src="/theme/nooplus/plugins/jquery-1.11.3.min.js"></script>
+
+<!--icomoon兼容IE7-->
+<!--[if lt IE 8]>
+<script src="/theme/nooplus/plugins/icomoon/icomoon-ie7.min.js"></script>
+<![endif]-->
+
+<!--兼容input placeholder属性-->
+<!--[if lt IE 10]>
+<script src="/theme/nooplus/plugins/placeholderV2.min.js"></script>
+<![endif]-->
+
+<!-- build:js /theme/nooplus/js/main.js -->
+<!--isPC-->
+<script src="/theme/nooplus/js/addons/isPC.js"></script>
+<!--isIE-->
+<script src="/theme/nooplus/js/addons/isIE.js"></script>
+<!--MD5-->
+<script src="/theme/nooplus/js/addons/md5.min.js"></script>
+<!--bootstrap-modal-->
+<script src="/theme/nooplus/js/addons/bootstrap-modal.js"></script>
+<!--card-->
+<script src="/theme/nooplus/js/components/card.js"></script>
+<!--header-->
+<script src="/theme/nooplus/js/components/header.js"></script>
+<!-- endbuild -->
+
+<script>
+    $('#result').modal('show')
+</script>
+</body>
+</html>
