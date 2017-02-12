@@ -1,4 +1,4 @@
-# Nooplus_website
+# Nooplus
 
 ## 介绍
 * 这是一个前端新手的练手项目。
@@ -19,5 +19,5 @@
 [![OwlCarousel version](https://img.shields.io/badge/OwlCarousel-v2.2.0-green.svg)](http://owlcarousel2.github.io/OwlCarousel2/)
 [![html5shiv version](https://img.shields.io/badge/html5shiv-v3.7.3-green.svg)](https://github.com/aFarkas/html5shiv)
 [![normalize version](https://img.shields.io/badge/normalize-v5.0.0-green.svg)](https://github.com/necolas/normalize.css)
-[![bootstrap version](https://img.shields.io/badge/normalize-v5.0.0-green.svg)](https://github.com/twbs/bootstrap)
-[![JavaScript-MD5 version](https://img.shields.io/badge/normalize-v5.0.0-green.svg)](https://github.com/blueimp/JavaScript-MD5)
+[![bootstrap version](https://img.shields.io/badge/bootstrap-v3.0.0-green.svg)](https://github.com/twbs/bootstrap)
+[![JavaScript-MD5 version](https://img.shields.io/badge/JavaScriptMD5-v2.6.0-green.svg)](https://github.com/blueimp/JavaScript-MD5)
