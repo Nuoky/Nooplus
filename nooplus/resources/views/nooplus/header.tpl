@@ -32,7 +32,7 @@
         <div class="container">
             <div class="navbar-content clearfix" id="navbarContent">
                 <div class="logo">
-                    <a href="/#home" class="top-link">NOOPLUS</a>
+                    <a href="/#home" class="top-link">{$config["appName"]}</a>
                 </div>
                 {if $user->isLogin}
                 <!--已登录-->
